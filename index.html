@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retaining Wall Proposal - Bruce Ramsey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-border-0 { border: none !important; }
+            .print-shadow-none { box-shadow: none !important; }
+            .page-break { page-break-before: always; }
+            body { background-color: #ffffff; padding: 0; }
+        }
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-card.selected {
+            border-color: #2563eb;
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200 print:shadow-none print:border-0">
+        
+        <!-- HEADER -->
+        <div class="bg-slate-800 text-white p-8 print:bg-white print:text-black print:border-b-2 print:border-black">
+            <div class="flex flex-col sm:flex-row justify-between items-start gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold uppercase tracking-wider">Holland Family</h1>
+                    <h2 class="text-xl font-light text-slate-300 print:text-gray-600">Home Services, Inc.</h2>
+                    <p class="mt-4 text-sm text-slate-400 print:text-gray-600 leading-relaxed">
+                        70 Copperhead Trail<br>
+                        Murphy, NC 28906<br>
+                        828-541-2442 | Thehollandseven@gmail.com
+                    </p>
+                </div>
+                <div class="sm:text-right w-full sm:w-auto">
+                    <h3 class="text-2xl font-bold tracking-wide">PROJECT PROPOSAL</h3>
+                    <p class="text-slate-400 print:text-gray-600 text-sm">Date: October 28, 2026</p>
+                    <div class="mt-4 bg-slate-700 p-4 rounded-lg text-left print:bg-gray-100 print:text-black">
+                        <p class="text-xs uppercase text-slate-400 print:text-gray-500 font-semibold mb-1">Prepared For:</p>
+                        <p class="font-bold text-white print:text-black text-lg">Bruce Ramsey</p>
+                        <p class="text-sm text-slate-300 print:text-gray-700">Main House</p>
+                        <p class="text-sm text-slate-300 print:text-gray-700">Blairsville, GA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT OVERVIEW -->
+        <div class="p-8 border-b border-gray-200">
+            <h3 class="text-lg font-bold text-gray-800 mb-2 uppercase tracking-wide">Project Overview & Scope of Work</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+                Construction of two integrated slope-retention walls totaling approximately 46 linear feet (Run 1: 24' 4", Run 2: 21' 7") at a finished height of 1' 10" (22 inches) behind the main rear concrete slab. This structural barrier mitigates hillside runoff, prevents soil and debris erosion onto the concrete pad, and matches the established profile of the existing parking extension.
+            </p>
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r">
+                <p class="text-sm text-blue-900 font-medium">
+                    <strong>Turnkey Scope:</strong> Includes all site preparation, trenching, structural wall installation, integrated drainage and aggregate backfill, materials, delivery, and project cleanup.
+                </p>
+            </div>
+        </div>
+
+        <!-- 1. SELECT WALL CONSTRUCTION SYSTEM -->
+        <div class="p-8 border-b border-gray-200">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-bold text-gray-800 uppercase tracking-wide">1. Select Wall Construction System</h3>
+                <span class="text-xs bg-yellow-100 text-yellow-800 font-semibold px-2.5 py-1 rounded no-print">Required Selection</span>
+            </div>
+            <p class="text-gray-600 mb-6 text-sm">Please select one of the two wall construction systems below. Both options represent complete, turnkey packages covering all site preparation, materials, aggregate delivery, and installation.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- OPTION A: RAILROAD TIES -->
+                <div id="card-mat-a" class="option-card selected border-2 border-blue-600 bg-blue-50 rounded-xl p-6 cursor-pointer flex flex-col justify-between" onclick="selectSystem('a')">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="font-bold text-lg text-gray-900">Option A: Treated Railroad Ties</div>
+                                <span class="text-xs text-blue-700 font-semibold uppercase tracking-wider">Matches Existing Extension</span>
+                            </div>
+                            <div class="h-6 w-6 rounded-full border-2 border-blue-600 flex items-center justify-center bg-white" id="radio-mat-a">
+                                <div class="h-3 w-3 rounded-full bg-blue-600"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                            Heavy-duty treated timber retaining wall constructed to match the profile and appearance of the existing trailer parking pad extension.
+                        </p>
+                        <ul class="text-xs text-gray-600 mb-5 space-y-1.5 list-disc list-inside">
+                            <li>Complete site excavation & foundation leveling</li>
+                            <li>Heavy-duty ground-contact timber construction</li>
+                            <li>Integrated hillside drainage & backfill system</li>
+                            <li><strong>Estimated Timeline:</strong> ~2 Workdays</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-gray-200 pt-3 flex justify-between items-baseline">
+                        <span class="text-xs text-gray-500 uppercase font-medium">Turnkey Cost:</span>
+                        <span class="text-2xl font-bold text-slate-900" id="display-price-opt-a">$3,251.10</span>
+                    </div>
+                </div>
+
+                <!-- OPTION B: LANDSCAPE BLOCK -->
+                <div id="card-mat-b" class="option-card border-2 border-gray-200 rounded-xl p-6 cursor-pointer hover:border-gray-300 flex flex-col justify-between" onclick="selectSystem('b')">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="font-bold text-lg text-gray-900">Option B: Landscape Block System</div>
+                                <span class="text-xs text-emerald-700 font-semibold uppercase tracking-wider">Engineered Masonry System</span>
+                            </div>
+                            <div class="h-6 w-6 rounded-full border-2 border-gray-300 flex items-center justify-center bg-white" id="radio-mat-b">
+                                <div class="h-3 w-3 rounded-full bg-blue-600 hidden"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                            Architectural concrete retaining wall system offering a permanent, maintenance-free masonry finish with top coping capstones.
+                        </p>
+                        <ul class="text-xs text-gray-600 mb-4 space-y-1.5 list-disc list-inside">
+                            <li>Complete site excavation & compacted base pad</li>
+                            <li>Permanent masonry structure; rot & weather-proof</li>
+                            <li>Integrated hillside drainage & backfill system</li>
+                            <li><strong>Estimated Timeline:</strong> ~3–4 Workdays</li>
+                        </ul>
+
+                        <!-- BLOCK ALLOWANCE SLIDER -->
+                        <div class="bg-white/90 p-3.5 rounded-lg border border-gray-300 mb-4 shadow-sm" onclick="event.stopPropagation()">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <label for="block-slider" class="text-xs font-bold text-gray-700 uppercase">Block Style Budget Allowance:</label>
+                                <span class="text-sm font-extrabold text-blue-700 bg-blue-100 px-2 py-0.5 rounded" id="block-rate-display">$3.50 / block</span>
+                            </div>
+                            <input type="range" id="block-slider" min="3" max="10" step="0.50" value="3.50" 
+                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                oninput="updateBlockSlider(this.value)">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1 font-medium">
+                                <span>$3.00 (Standard)</span>
+                                <span>$6.50 (Mid-Grade)</span>
+                                <span>$10.00 (Premium)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-3 flex justify-between items-baseline">
+                        <span class="text-xs text-gray-500 uppercase font-medium">Turnkey Cost:</span>
+                        <span class="text-2xl font-bold text-slate-900" id="display-price-opt-b">$3,973.35</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2. OPTIONAL ADD-ONS -->
+        <div class="p-8 border-b border-gray-200 bg-gray-50">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 uppercase tracking-wide">2. Optional Project Add-On</h3>
+            <div class="flex items-center justify-between bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                <div class="flex items-center">
+                    <input type="checkbox" id="check-addon-1" class="h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500 cursor-pointer" onchange="calculateTotal()">
+                    <label for="check-addon-1" class="ml-3 block text-gray-800 font-medium cursor-pointer">
+                        Perimeter Seed & Erosion Blanket Restoration
+                        <span class="block text-xs text-gray-500 font-normal">Fine grading disturbed hillside edges above the walls, seeding with mountain fescue blend, and staking biodegradable straw erosion blanket.</span>
+                    </label>
+                </div>
+                <div class="font-bold text-gray-800 text-base" id="display-addon-price">+$275.00</div>
+            </div>
+        </div>
+
+        <!-- TOTAL DISPLAY BANNER -->
+        <div class="p-8 bg-slate-900 text-white">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold block">Total Turnkey Investment</span>
+                    <span class="text-sm text-slate-300" id="selected-summary-label">Selected: Option A (Treated Railroad Ties)</span>
+                </div>
+                <div class="text-right">
+                    <div class="text-4xl font-extrabold text-white tracking-tight" id="grand-total">$3,251.10</div>
+                    <span class="text-xs text-slate-400 block mt-1">All-inclusive bottom line price</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUMMARY & CC TOGGLE -->
+        <div class="p-8 border-b border-gray-200">
+            <div class="mb-4 pb-4 border-b border-gray-200 text-sm space-y-2 hidden" id="summary-adjustments">
+                <div class="flex justify-between hidden" id="row-addon">
+                    <span class="text-gray-600">Selected Add-On (Seed & Erosion Blanket):</span>
+                    <span class="font-semibold text-gray-800" id="breakdown-addon">$275.00</span>
+                </div>
+                <div class="flex justify-between hidden" id="row-cc-fee">
+                    <span class="text-gray-600">Credit Card Processing Fee (4%):</span>
+                    <span class="font-semibold text-gray-800" id="breakdown-cc">$0.00</span>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-end">
+                <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="use-credit-card" class="h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500" onchange="calculateTotal()">
+                    <span class="ml-2 text-sm font-medium text-gray-700">Pay with Credit Card (Adds 4% Bank Processing Fee)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- 2-STAGE PAYMENT SCHEDULE -->
+        <div class="p-8 border-b border-gray-200 bg-gray-50">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 uppercase tracking-wide">Payment Schedule</h3>
+            <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="font-bold text-gray-800 mb-1">1. Deposit (Signing)</p>
+                    <p class="text-xs text-gray-500 mb-3">Initial commitment to secure materials & project schedule.</p>
+                    <p class="text-2xl font-bold text-blue-600" id="deposit-materials">$2,051.10</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="font-bold text-gray-800 mb-1">2. Completion</p>
+                    <p class="text-xs text-gray-500 mb-3">Final balance due upon project completion & walkthrough.</p>
+                    <p class="text-2xl font-bold text-gray-900" id="balance-amount">$1,200.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIGITAL SIGNATURE SECTION (CANVAS) -->
+        <div class="p-8 border-b border-gray-200">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 uppercase tracking-wide">Proposal Acceptance & Digital Authorization</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                    <label for="client-name" class="block text-sm font-medium text-gray-700">Client Printed Name</label>
+                    <input type="text" id="client-name" value="Bruce Ramsey" class="mt-1 block w-full bg-gray-50 px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="date-input" class="block text-sm font-medium text-gray-700">Date</label>
+                    <input type="date" id="date-input" class="mt-1 block w-full bg-gray-50 px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Client Signature (Draw Below)</label>
+                <canvas id="signature-pad" width="600" height="160" class="w-full border-2 border-dashed border-gray-300 rounded-lg bg-gray-50 cursor-crosshair touch-none"></canvas>
+                <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                    <span>Sign with mouse or touchscreen</span>
+                    <button type="button" onclick="clearSignature()" class="text-blue-600 hover:text-blue-800 underline no-print font-medium">Clear Signature</button>
+                </div>
+            </div>
+
+            <!-- PRINT / SAVE AS PDF BUTTON -->
+            <div class="mt-8 pt-6 border-t border-gray-200 no-print">
+                <div class="text-center">
+                    <p class="text-xs text-gray-500 mb-3">Click below to print or download a clean PDF copy of this signed proposal.</p>
+                    <button type="button" onclick="window.print()" class="px-8 py-3 bg-slate-800 text-white font-semibold rounded-lg shadow-md hover:bg-slate-700 transition-colors">
+                        Save as PDF / Print Proposal
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- APPENDIX & SCHEDULE -->
+        <div class="p-8 page-break">
+            <h3 class="text-xl font-bold mb-6 uppercase text-slate-800 tracking-wide">Appendix: Schedule, Terms & Conditions</h3>
+
+            <div class="mb-8">
+                <h4 class="font-bold text-gray-800 mb-3 bg-gray-100 p-2.5 rounded text-sm uppercase">Estimated Workday Duration</h4>
+                <div class="border-l-4 border-blue-600 pl-4 ml-2 space-y-3 text-sm text-gray-600">
+                    <div>
+                        <p class="font-bold text-gray-800">Option A (Treated Railroad Ties): ~2 Workdays</p>
+                        <p>Includes site preparation, trenching, timber installation, drainage integration, and final cleanup.</p>
+                    </div>
+                    <div id="schedule-block-day3">
+                        <p class="font-bold text-gray-800">Option B (Landscape Block System): ~3 to 4 Workdays</p>
+                        <p>Includes site preparation, base pad compaction, block & capstone installation, drainage integration, and final cleanup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-8 text-sm text-gray-700">
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2 uppercase text-xs tracking-wider">Scope Clarifications</h4>
+                    <ul class="list-disc list-inside space-y-1.5 text-gray-600 text-xs leading-relaxed">
+                        <li><strong>Drainage & Backfill:</strong> Both wall options include integrated drainage and backfill behind the wall to relieve hillside water pressure.</li>
+                        <li><strong>Property Access:</strong> Unobstructed yard access for material staging and equipment is assumed.</li>
+                        <li><strong>Block Selection:</strong> Final cost for Option B adjusts automatically based on the selected per-block material budget ($3.00–$10.00/unit).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2 uppercase text-xs tracking-wider">Conditions & Exclusions</h4>
+                    <ul class="list-disc list-inside space-y-1.5 text-gray-600 text-xs leading-relaxed">
+                        <li><strong>Hidden Subsurface Obstacles:</strong> Quote assumes standard soil excavation. Large buried boulders or unmarked utility lines requiring specialty equipment will be billed via change order.</li>
+                        <li><strong>Material Pricing:</strong> Estimate pricing is valid for 30 days from the date of issue.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-gray-200 text-center text-xs text-gray-400">
+                Holland Family Home Services, Inc. • Murphy, NC
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // =========================================================================
+        // MASTER ESTIMATE CONFIGURATION (Holland Family Home Services)
+        // =========================================================================
+        
+        // OPTION A: RAILROAD TIES (Includes +$800 bulk gravel delivery adjustment)
+        const OPT_A_LABOR = 1200.00;
+        const OPT_A_MATERIALS = 2051.10; // Original $1,251.10 + $800.00 bulk gravel adjustment
+
+        // OPTION B: LANDSCAPE BLOCK (Includes +$800 bulk gravel delivery adjustment)
+        // Slider adjusts block budget from $3.00/block to $10.00/block across 166 units
+        const OPT_B_LABOR = 1950.00;
+        const BLOCK_COUNT = 166;
+        const OPT_B_BASE_MATERIALS = 1442.35; // Non-block materials + $800 bulk gravel adjustment
+
+        // OPTIONAL ADD-ON
+        const PRICE_ADDON = 275.00;
+
+        // CREDIT CARD FEE (4%)
+        const CC_FEE_RATE = 0.04;
+
+        let currentOption = 'a'; // Default to Option A (Railroad Ties)
+        let currentBlockPrice = 3.50; // Default slider position ($3.50/block)
+
+        function formatMoney(amount) {
+            return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function getOptionBMaterials() {
+            return OPT_B_BASE_MATERIALS + (BLOCK_COUNT * currentBlockPrice);
+        }
+
+        function updateBlockSlider(val) {
+            currentBlockPrice = parseFloat(val);
+            document.getElementById('block-rate-display').innerText = formatMoney(currentBlockPrice) + ' / block';
+            
+            const optBTotal = OPT_B_LABOR + getOptionBMaterials();
+            document.getElementById('display-price-opt-b').innerText = formatMoney(optBTotal);
+
+            // Automatically switch to Option B when user interacts with the slider
+            if (currentOption !== 'b') {
+                selectSystem('b');
+            } else {
+                calculateTotal();
+            }
+        }
+
+        function selectSystem(opt) {
+            currentOption = opt;
+
+            const cardA = document.getElementById('card-mat-a');
+            const cardB = document.getElementById('card-mat-b');
+            const radioA = document.getElementById('radio-mat-a');
+            const radioB = document.getElementById('radio-mat-b');
+            const scheduleDay3 = document.getElementById('schedule-block-day3');
+
+            if (opt === 'a') {
+                cardA.classList.add('selected', 'border-blue-600', 'bg-blue-50');
+                cardA.classList.remove('border-gray-200');
+                radioA.classList.add('border-blue-600');
+                radioA.querySelector('div').classList.remove('hidden');
+
+                cardB.classList.remove('selected', 'border-blue-600', 'bg-blue-50');
+                cardB.classList.add('border-gray-200');
+                radioB.classList.remove('border-blue-600');
+                radioB.querySelector('div').classList.add('hidden');
+
+                document.getElementById('selected-summary-label').innerText = "Selected: Option A (Treated Railroad Ties)";
+                scheduleDay3.classList.add('opacity-40');
+            } else {
+                cardB.classList.add('selected', 'border-blue-600', 'bg-blue-50');
+                cardB.classList.remove('border-gray-200');
+                radioB.classList.add('border-blue-600');
+                radioB.querySelector('div').classList.remove('hidden');
+
+                cardA.classList.remove('selected', 'border-blue-600', 'bg-blue-50');
+                cardA.classList.add('border-gray-200');
+                radioA.classList.remove('border-blue-600');
+                radioA.querySelector('div').classList.add('hidden');
+
+                document.getElementById('selected-summary-label').innerText = `Selected: Option B (Landscape Block @ ${formatMoney(currentBlockPrice)}/block)`;
+                scheduleDay3.classList.remove('opacity-40');
+            }
+
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let labor = (currentOption === 'a') ? OPT_A_LABOR : OPT_B_LABOR;
+            let materials = (currentOption === 'a') ? OPT_A_MATERIALS : getOptionBMaterials();
+            let addonTotal = 0;
+
+            if (currentOption === 'b') {
+                document.getElementById('selected-summary-label').innerText = `Selected: Option B (Landscape Block @ ${formatMoney(currentBlockPrice)}/block)`;
+            }
+
+            const hasAddon = document.getElementById('check-addon-1').checked;
+            if (hasAddon) {
+                addonTotal = PRICE_ADDON;
+                document.getElementById('row-addon').classList.remove('hidden');
+                document.getElementById('breakdown-addon').innerText = formatMoney(PRICE_ADDON);
+            } else {
+                document.getElementById('row-addon').classList.add('hidden');
+            }
+
+            let subtotal = labor + materials + addonTotal;
+            let grandTotal = subtotal;
+
+            // Credit Card Fee Calculation
+            const useCC = document.getElementById('use-credit-card').checked;
+            let ccFee = 0;
+            if (useCC) {
+                ccFee = grandTotal * CC_FEE_RATE;
+                grandTotal += ccFee;
+                document.getElementById('row-cc-fee').classList.remove('hidden');
+                document.getElementById('breakdown-cc').innerText = formatMoney(ccFee);
+            } else {
+                document.getElementById('row-cc-fee').classList.add('hidden');
+            }
+
+            const summaryAdjustments = document.getElementById('summary-adjustments');
+            if (hasAddon || useCC) {
+                summaryAdjustments.classList.remove('hidden');
+            } else {
+                summaryAdjustments.classList.add('hidden');
+            }
+
+            // 2-Stage Payment Schedule (Deposit + Final Completion Balance)
+            let depositMaterials = materials;
+            
+            if (useCC) {
+                depositMaterials = depositMaterials * (1 + CC_FEE_RATE);
+            }
+            let finalBalance = grandTotal - depositMaterials;
+
+            // Update UI elements
+            document.getElementById('grand-total').innerText = formatMoney(grandTotal);
+            document.getElementById('deposit-materials').innerText = formatMoney(depositMaterials);
+            document.getElementById('balance-amount').innerText = formatMoney(finalBalance);
+        }
+
+        // =========================================================================
+        // HTML5 CANVAS SIGNATURE PAD LOGIC
+        // =========================================================================
+        const canvas = document.getElementById('signature-pad');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            const ratio = window.devicePixelRatio || 1;
+            canvas.width = rect.width * ratio;
+            canvas.height = rect.height * ratio;
+            ctx.scale(ratio, ratio);
+            ctx.lineWidth = 2.5;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = '#0f172a'; // slate-900 ink
+        }
+
+        function getCoordinates(event) {
+            const rect = canvas.getBoundingClientRect();
+            if (event.touches && event.touches.length > 0) {
+                return {
+                    x: event.touches[0].clientX - rect.left,
+                    y: event.touches[0].clientY - rect.top
+                };
+            }
+            return {
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top
+            };
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            const pos = getCoordinates(e);
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+            if (e.cancelable && e.type.startsWith('touch')) e.preventDefault();
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            const pos = getCoordinates(e);
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+            if (e.cancelable && e.type.startsWith('touch')) e.preventDefault();
+        }
+
+        function stopDrawing() {
+            if (isDrawing) {
+                isDrawing = false;
+                ctx.closePath();
+            }
+        }
+
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Canvas Event Listeners (Mouse & Touch)
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        window.addEventListener('mouseup', stopDrawing);
+
+        canvas.addEventListener('touchstart', startDrawing, { passive: false });
+        canvas.addEventListener('touchmove', draw, { passive: false });
+        window.addEventListener('touchend', stopDrawing);
+
+        // Window & Init Handlers
+        window.addEventListener('resize', resizeCanvas);
+
+        window.onload = function() {
+            calculateTotal();
+            resizeCanvas();
+            // Default current date
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('date-input');
+            if (dateInput) dateInput.value = today;
+        };
+    </script>
+</body>
+</html>
